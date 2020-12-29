@@ -73,7 +73,8 @@ typedef struct {
     max7219_shutdown_t Shutdown;
 } max7219_config_t;
 
-void MAX7219_Init(const max7219_config_t *pCfgCxt);
+void MAX7219_Init(void);
+void MAX7219_Config(const max7219_config_t *pCfgCxt);
 void MAX7219_Display(const max7219_config_t *pCfgCxt, uint32_t Num);
 void MAX7219_Write(uint8_t chip_idx, uint8_t addr, uint8_t data);
 
