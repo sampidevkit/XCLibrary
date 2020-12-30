@@ -65,12 +65,13 @@ typedef enum SHUTDOWN_REGISTER_FORMAT {
     NORMAL_MODE
 } max7219_shutdown_t;
 
-typedef struct {
+typedef struct MAX7219_CONFIG_CONTEXT{
     uint8_t ChipIdx;
     max7219_decode_mode_t Decode;
     max7219_intensity_t Intensity;
     max7219_scan_limit_t ScanLimit;
     max7219_shutdown_t Shutdown;
+    struct MAX7219_CONFIG_CONTEXT *pNext;
 } max7219_config_t;
 
 void MAX7219_Init(void);
